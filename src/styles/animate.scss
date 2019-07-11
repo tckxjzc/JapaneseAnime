@@ -1,0 +1,38 @@
+$time:500ms;
+.slide-enter {
+  left: 100%;
+}
+.slide-enter-active {
+  left: 0;
+  transition: left $time ease-in;
+}
+.slide-exit {
+  left: 0;
+}
+.slide-exit-active {
+  left: -100%;
+  transition: left  $time ease-in;
+
+}
+.slide-enter,
+.slide-enter-active,
+.slide-exit,
+.slide-exit-active{
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#container,
+#container>div,
+#container>div>div,
+#container>div>div>div{
+  height: 100%;
+  overflow: hidden;
+}
+#container>div>div>div{
+  position: relative;
+  overflow-y: scroll;
+  margin: 0 auto;
+  max-width: 720px;
+}

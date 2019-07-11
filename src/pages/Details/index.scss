@@ -1,0 +1,26 @@
+@import "../../styles/theme";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.body{
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  p{
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  b{
+    color: #ff5a91;
+    font-size: 1.2rem;
+  }
+  i{
+    color: #188bd6;
+  }
+}
+.player{
+  height: 66px;
+}

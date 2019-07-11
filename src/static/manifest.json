@@ -1,0 +1,18 @@
+{
+  "name": "动漫日语300句",
+  "short_name": "动漫日语",
+  "description": "日语学习",
+  "icons": [{
+    "src": "/icon.png",
+    "sizes": "256x256",
+    "type": "image/png"
+  }],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#188bd6",
+  "theme_color": "#188bd6",
+  "related_applications": [],
+  "prefer_related_applications": false
+}

@@ -1,0 +1,32 @@
+//home header
+
+.search-container{
+  display: flex;
+  flex: 1;
+  margin-left: 1rem;
+  padding-right: 0.5rem;
+  background-color: fade_in(#fff,0.1);
+}
+.search-root{
+  flex: 1;
+  padding:0 0.5rem;
+}
+.search-input{
+  //background-color: #fff;
+}
+
+.search-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//details header
+
+
+.title{
+  overflow: hidden;
+  padding-left: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
