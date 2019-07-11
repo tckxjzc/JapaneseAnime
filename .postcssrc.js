@@ -5,7 +5,7 @@ module.exports = {
     // to edit target browsers: use "browserslist" field in package.json
     // "postcss-import": {},
     "autoprefixer": {
-      "browsers": [
+      "overrideBrowserslist": [
         // "last 1 version",
         "> 0.1%",
         // "maintained node versions",

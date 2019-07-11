@@ -19,7 +19,7 @@ module.exports = {
         'main': path.join(__dirname, '../src/main.tsx')
     },
     output: {
-        filename: resourceOutput + '/[name].js',
+        filename: resourceOutput + '/[name]_[chunkhash:8].js',
         chunkFilename: resourceOutput + '/chunk/[name]_[chunkhash:8].js',
         path: dist,
         publicPath: publicPath

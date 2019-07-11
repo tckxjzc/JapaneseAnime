@@ -5,17 +5,40 @@ type Data = {
     chinese: Array<string>,
     japanese: Array<string>,
     audio: Array<any>,
+    scrollTop: number,
+    controller:boolean,
 };
 export const data: Data = {
     chinese: null,
     japanese: null,
     audio: [],
+    scrollTop: 0,
+    controller:null,//service work enabled
 };
 export const store = observable({
     id: '',
+    searchWord: '',
     title: '',
-    details: ''
+    details: '',
+    openMenu: false,
+    openDialog:false,
 });
+//打开菜单
+export function openMenu() {
+    store.openMenu = true;
+}
+//关闭菜单
+export function closeMenu() {
+    store.openMenu = false;
+}
+//打开dialog
+export function openDialog() {
+    store.openDialog = true;
+}
+//关闭dialog
+export function closeDialog() {
+    store.openDialog = false;
+}
 
 
 /**
@@ -81,6 +104,6 @@ reaction(() => {
 }, (id) => {
     if (id) {
         loadDetails(id);
-        store.title = id + '.' + data.audio[parseInt(id)-1].name;
+        store.title = id + '.' + data.audio[parseInt(id) - 1].name;
     }
 });

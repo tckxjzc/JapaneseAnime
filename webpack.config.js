@@ -14,6 +14,7 @@ module.exports=merge(baseConfig,{
         }),
         new HtmlWebpackPlugins({
             title:title,
+            hash:true,
             template: path.join(__dirname,'./src/template/index-load.html'),
             filename:`${dist}/index.html`,
         })

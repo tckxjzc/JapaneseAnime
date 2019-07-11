@@ -8,7 +8,8 @@
 }
 
 //list container
-.list-root{
+.list-root {
+  position: relative;
   flex: 1;
   overflow-y: auto;
 }
@@ -36,4 +37,46 @@
 
 .item-primary {
   color: $primary;
+}
+
+//jump control
+.control {
+  $size: 40px;
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  width: $size;
+
+  .fab {
+    width: $size;
+    height: $size;
+
+    & + .fab {
+      margin-top: 16px;
+    }
+  }
+}
+
+//left menu
+
+.left-menu {
+  width: 160px;
+  padding: 16px 11px;
+
+  .icon {
+    text-align: center;
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+  }
+  h1 {
+    margin-top: 20px;
+    text-align: center;
+    color: $primary;
+    font-size: 1rem;
+  }
 }

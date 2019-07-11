@@ -8,7 +8,7 @@ import Search from "@material-ui/icons/Search";
 import Home from "@material-ui/icons/Home";
 import {goHome} from "../../routers/history";
 import Typography from "@material-ui/core/Typography";
-import {store} from "../../store";
+import {openMenu, store} from "../../store";
 import {observer} from "mobx-react";
 
 
@@ -24,9 +24,9 @@ export class HomeHeader extends Component<Props> {
         return <div>
             <AppBar position={'static'} color={"primary"}>
                 <Toolbar>
-                    <Menu/>
+                    <Menu onClick={openMenu}/>
                     <div className={classes["search-container"]}>
-                        <InputBase placeholder={'Search...'} classes={{
+                        <InputBase defaultValue={store.searchWord} onChange={this.search} placeholder={'Search...'} classes={{
                             root: classes["search-root"],
                             input: classes["search-input"]
                         }}/>
@@ -47,10 +47,17 @@ export class HomeHeader extends Component<Props> {
     /**
      *properties
      */
-
+    times;
     /**
      *method
      */
+    search=(e)=>{
+        let word=e.target.value.replace(/\s+/g,' ').replace(/^\s/g,'').replace(/\s$/g,'');
+        clearTimeout(this.times);
+        this.times=setTimeout(function () {
+            store.searchWord=word;
+        },300);
+    };
 }
 @observer
 export class DetailsHeader extends Component<Props> {

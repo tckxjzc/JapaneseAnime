@@ -5,7 +5,9 @@ import App from "./App";
  * polyfill
  */
 import './polyfill';
+import {start as startCache} from "./utils/cache";
 
+'./utils/cache';
 /**
  * styles
  */
@@ -45,5 +47,6 @@ new Promise(function (resolve, reject) {
 function start() {
     render(<App/>,
         document.getElementById('container'));
+    setTimeout(startCache, 100);
 }
 
