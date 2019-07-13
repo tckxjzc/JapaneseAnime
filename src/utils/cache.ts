@@ -1,4 +1,5 @@
 import {data} from "../store";
+import {version} from "./version";
 
 export function start() {
     if ('serviceWorker' in window.navigator) {
@@ -16,8 +17,8 @@ export function start() {
 
 //缓存首页资源
 function cacheHomeResource() {
-    let flag = localStorage.getItem('CacheHomeResource');
-    if (flag) {
+    let cacheVersion = localStorage.getItem('CacheHomeResource');
+    if (cacheVersion == version) {
         return
     }
     let resources = new Set<string>();
@@ -60,7 +61,7 @@ function cacheHomeResource() {
         }
     }).then(function () {
         if (resources.size == 0) {
-            localStorage.setItem('CacheHomeResource', Date.now() + '');
+            localStorage.setItem('CacheHomeResource', version);
             console.log('home缓存成功');
         }
     });
