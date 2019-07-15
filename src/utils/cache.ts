@@ -26,6 +26,7 @@ function cacheHomeResource() {
     //html
     resources.add('/');
     resources.add('/icon.png');
+    resources.add('/images/cover.png');
     resources.add('/details/index.txt');
     resources.add('/details/index_jp.txt');
     //script
@@ -34,13 +35,14 @@ function cacheHomeResource() {
             resources.add(src);
         }
     });
+    //styles
     forEach.call(document.getElementsByTagName('link'), function ({href}) {
         if (href) {
             resources.add(href);
         }
     });
     //start
-    new Promise(function (resolve, reject) {
+    return new Promise(function (resolve, reject) {
         let length = resources.size;
         let count = 0;
         resources.forEach(function (value) {
