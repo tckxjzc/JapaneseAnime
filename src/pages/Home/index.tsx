@@ -62,7 +62,7 @@ class Home extends Component<Props> {
                                     }}>
                                         <ListItemText classes={{
                                             primary: classes["item-primary"]
-                                        }} primary={`${id}.${item}`} secondary={japanese[index]}/>
+                                        }} primary={`${id}.${japanese[index]}`} secondary={item}/>
                                     </ListItem>
                                 </Link>
                             })

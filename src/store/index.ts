@@ -71,7 +71,7 @@ export function initAudioData() {
     japanese.forEach(function (item, index) {
         data.audio.push({
             id: index,
-            name: `${chinese[index]}(${item})`,
+            name: `${item}(${chinese[index]})`,
             artist: 'anime',
             cover: '/images/cover.jpg',
             url: `/voices/chu_${String(index + 1).padStart(3, '0')}.mp3`,
