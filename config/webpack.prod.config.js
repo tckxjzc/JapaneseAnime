@@ -10,15 +10,15 @@ let webpack=require('webpack');
 module.exports=merge(baseConfig,{
     mode:'production',
     externals:{
-        'react':'React',
-        'react-dom': 'ReactDOM',
-        'react-router-dom':'ReactRouterDOM',
-        'jquery':'$',
-        'moment':'moment',
-        'swiper':'Swiper',
-        'mobx':'mobx',
-        'mobx-react':'mobxReact',
-        'aplayer':'APlayer',
+        // 'react':'React',
+        // 'react-dom': 'ReactDOM',
+        // 'react-router-dom':'ReactRouterDOM',
+        // 'jquery':'$',
+        // 'moment':'moment',
+        // 'swiper':'Swiper',
+        // 'mobx':'mobx',
+        // 'mobx-react':'mobxReact',
+        // 'aplayer':'APlayer',
     },
     plugins:[
         new webpack.DefinePlugin({
@@ -45,12 +45,12 @@ module.exports=merge(baseConfig,{
                 // 'https://cdnjs.cloudflare.com/ajax/libs/react/16.3.2/umd/react.production.min.js',
                 // 'https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.3.2/umd/react-dom.production.min.js',
                 // 'https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/4.2.2/react-router-dom.min.js'
-                '//cdn.bootcss.com/react/16.8.6/umd/react.production.min.js',
-                '//cdn.bootcss.com/react-dom/16.8.6/umd/react-dom.production.min.js',
-                '//cdn.bootcss.com/react-router-dom/4.2.2/react-router-dom.min.js',
-                '//cdn.bootcss.com/mobx/5.9.4/mobx.umd.min.js',
-                '//cdn.bootcss.com/mobx-react/5.4.4/index.min.js',
-                '//cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js'
+                // '//cdn.bootcss.com/react/16.8.6/umd/react.production.min.js',
+                // '//cdn.bootcss.com/react-dom/16.8.6/umd/react-dom.production.min.js',
+                // '//cdn.bootcss.com/react-router-dom/4.2.2/react-router-dom.min.js',
+                // '//cdn.bootcss.com/mobx/5.9.4/mobx.umd.min.js',
+                // '//cdn.bootcss.com/mobx-react/5.4.4/index.min.js',
+                // '//cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js'
             ],
             filename:`${dist}/index.html`
         }),

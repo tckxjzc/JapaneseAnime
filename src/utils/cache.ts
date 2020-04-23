@@ -26,7 +26,7 @@ function cacheHomeResource() {
     //html
     resources.add('/');
     resources.add('/icon.png');
-    resources.add('/images/cover.png');
+    resources.add('/images/cover.jpg');
     resources.add('/details/index.txt');
     resources.add('/details/index_jp.txt');
     //script
